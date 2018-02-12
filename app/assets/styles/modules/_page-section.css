@@ -1,0 +1,13 @@
+.page-section {
+  padding: 1.2rem 0;/*mobile first*/
+
+  @mixin atMedium {
+    padding: 4.5rem 0;/*padding top & bottom for sections/blocks in the website.*/
+  }
+
+  &--blue{
+    background-color: $mainBlue;
+    color: #fff;
+  }
+
+}
