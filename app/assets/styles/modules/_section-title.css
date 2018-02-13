@@ -1,0 +1,28 @@
+.section-title {
+  font-size: 2.55rem;/*mobile first*/
+  font-weight: 300;
+  text-align: center;
+
+  @mixin atSmall {
+    font-size: 3.75rem;/*for bigger devices*/
+  }
+
+  strong {
+    font-weight: 500;
+  }
+
+  &__icon {
+    display: block;/*drops text to new line (mobile first)*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.6rem;
+
+    @mixin atSmall {
+      margin-right: 0.5rem;/*only for larger screens*/
+      margin-left: 0;
+      display: inline-block;/*so that,  on large screen it doesnt drop text on next line (undoing mobile first)*/
+      margin-bottom: 0; /*undo margin-bottom of mobile first*/
+    }
+  }
+
+}
