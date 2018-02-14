@@ -586,6 +586,36 @@ a {
     max-width: 976px;
   }
 
+.wrapper--no-padding-until-medium {/*for testimonial mobile section*/
+    padding-left: 0;/*making existing padding-left zero for mobile version*/
+    padding-right: 0;
+  }
+
+/*making existing padding-right zero for mobile version*/
+
+@media (min-width: 800px) {
+
+.wrapper--no-padding-until-medium {/*restore the padding changed for mobile above*/
+      padding-left: 18px;
+      padding-right: 18px
+  }
+  }
+
+.wrapper--no-padding-until-large {/*for testimonial mobile section*/
+    padding-left: 0;/*making existing padding-left zero for mobile version*/
+    padding-right: 0;
+  }
+
+/*making existing padding-right zero for mobile version*/
+
+@media (min-width: 1010px) {
+
+.wrapper--no-padding-until-large {/*restore the padding changed for mobile above*/
+      padding-left: 18px;
+      padding-right: 18px
+  }
+  }
+
 .wrapper .wrapper{
     padding-left: 0;
     padding-right: 0;
@@ -593,14 +623,12 @@ a {
 
 .wrapper--b-margin {
     margin-bottom: 1rem;
-
   }
 
 @media (min-width: 530px) {
 
 .wrapper--b-margin {
       margin-bottom: 3.875rem
-
   }
   }
 
@@ -619,9 +647,49 @@ a {
 }
   }
 
+.page-section--no-b-padding-until-medium {
+    padding-bottom:  0;
+  }
+
+/*mobile first ---testimonials*/
+
+@media (min-width: 800px) {
+
+.page-section--no-b-padding-until-medium {
+      padding-bottom: 4.5rem/*testimonials*/
+  }
+  }
+
+.page-section--no-b-padding-until-large {
+    padding-bottom:  0;
+  }
+
+/*mobile first ---testimonials*/
+
+@media (min-width: 1010px) {
+
+.page-section--no-b-padding-until-large {
+      padding-bottom: 4.5rem/*testimonials*/
+  }
+  }
+
 .page-section--blue{
     background-color: #2f5572;
     color: #fff;
+  }
+
+.page-section--testimonials{
+    background-color: #e0e6ef;
+  }
+
+/*mobile first*/
+
+@media (min-width: 1010px) {
+
+.page-section--testimonials{
+      background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+      background-size: cover/*cover the entire div*/
+  }
   }
 
 .headline {
@@ -686,6 +754,10 @@ a {
     display: table;
   }
 
+.row--t-padding {
+    padding-top: 80px;/*for testimonial section*/
+  }
+
 .row--gutters {
     margin-right: -65px;
   }
@@ -694,12 +766,20 @@ a {
     margin-right: -100px;
   }
 
+.row--gutters-small {
+    margin-right: -45px;
+  }
+
 .row--gutters > div {
     padding-right: 65px;
   }
 
 .row--gutters-large > div {
     padding-right: 100px;
+  }
+
+.row--gutters-small > div {
+    padding-right: 45px;
   }
 
 .row__b-margin-until-medium {
@@ -734,6 +814,54 @@ a {
       width: 63%;
     }
   }
+
+@media (min-width: 1010px) {
+    
+    .row__b-margin-until-large {
+      margin-bottom: 0;
+    }
+
+    .row__large-4 {
+      float: left;
+      width: 33.33%;
+    }
+
+    .row__large-4--larger {
+      width: 37%;
+    }
+
+    .row__large-6 {
+      float: left;
+      width: 50%;
+    }
+
+    .row__large-8 {
+      float: left;
+      width: 66.66%;
+    }
+
+    .row__large-8--smaller {
+      width: 63%;
+    }
+  }
+
+/*begin equal height rules*/
+
+@media (min-width: 1010px) {
+
+.row--equal-height-at-large {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex
+  }
+  }
+
+.row--equal-height-at-large > div {
+      float: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
 
 .generic-content-container p {
     font-weight: 300;
@@ -771,6 +899,10 @@ a {
     font-weight: 500;
   }
 
+.section-title--blue {
+    color: #2f5572;
+  }
+
 .section-title__icon {
     display: block;/*drops text to new line (mobile first)*/
     margin-left: auto;
@@ -781,6 +913,8 @@ a {
 @media (min-width: 530px) {
 
 .section-title__icon {
+      position: relative;
+      top: 8px;/*pushes icon down by 8px (eg:-Testimonials icon)*/
       margin-right: 0.5rem;/*only for larger screens*/
       margin-left: 0;
       display: inline-block;/*so that,  on large screen it doesnt drop text on next line (undoing mobile first)*/
@@ -835,4 +969,53 @@ a {
       font-size: 1.875rem
 
   }
+  }
+
+.testimonial {
+  background-color: rgba(255, 255, 255, 0.80);/*in rgba "a stands for transparency". Thus, used rgba instead of #FFF*/
+  padding: 0 18px 1px 18px;
+  margin-bottom: 98px;
+
+}
+
+/*remove the overlapping in testimonial section*/
+
+@media (min-width: 1010px) {
+
+.testimonial {
+    margin-bottom: 0;/*removed the bottom margin from mobile first*/
+    padding: 0 1.8125rem 1px 1.8125rem
+
+}
+  }
+
+.testimonial--last {
+    margin-bottom: 0;/*remove margin from 3rd testimonial*/
+  }
+
+.testimonial__photo {
+    border-radius: 80px;/*widthImage/2*/
+    overflow: hidden;
+    width: 160px;/*exact width of image for circling the image*/
+    height: 160px;/*exact height of image for circling the image*/
+    margin: 0 auto -80px auto;/*-80 to pull the text upwards, as we move image upwards by 80px in line 12*/
+    position: relative;
+    top: -80px;/*to pull it on half above the div (widthImage/2)*/
+    border: 6px solid rgba(255, 255, 255, 0.80);
+  }
+
+.testimonial__title {
+    color: #2f5572;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+.testimonial__subtitle {
+    color: #d59541;
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    margin: 0.25rem 0 1rem 0;/*over-writting previous margin as it was too much*/
   }

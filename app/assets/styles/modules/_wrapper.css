@@ -10,6 +10,26 @@
     max-width: 976px;
   }
 
+  &--no-padding-until-medium {/*for testimonial mobile section*/
+    padding-left: 0;/*making existing padding-left zero for mobile version*/
+    padding-right: 0;/*making existing padding-right zero for mobile version*/
+
+    @mixin atMedium {/*restore the padding changed for mobile above*/
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
+
+  &--no-padding-until-large {/*for testimonial mobile section*/
+    padding-left: 0;/*making existing padding-left zero for mobile version*/
+    padding-right: 0;/*making existing padding-right zero for mobile version*/
+
+    @mixin atLarge {/*restore the padding changed for mobile above*/
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
+
   .wrapper{
     padding-left: 0;
     padding-right: 0;
@@ -21,7 +41,6 @@
     @mixin atSmall {
       margin-bottom: 3.875rem;
     }
-
   }
 
 }

@@ -1,0 +1,42 @@
+.testimonial {
+  background-color: rgba(255, 255, 255, 0.80);/*in rgba "a stands for transparency". Thus, used rgba instead of #FFF*/
+  padding: 0 18px 1px 18px;
+  margin-bottom: 98px; /*remove the overlapping in testimonial section*/
+
+  @mixin atLarge {
+    margin-bottom: 0;/*removed the bottom margin from mobile first*/
+    padding: 0 1.8125rem 1px 1.8125rem;
+  }
+
+  &--last {
+    margin-bottom: 0;/*remove margin from 3rd testimonial*/
+  }
+
+  &__photo {
+    border-radius: 80px;/*widthImage/2*/
+    overflow: hidden;
+    width: 160px;/*exact width of image for circling the image*/
+    height: 160px;/*exact height of image for circling the image*/
+    margin: 0 auto -80px auto;/*-80 to pull the text upwards, as we move image upwards by 80px in line 12*/
+    position: relative;
+    top: -80px;/*to pull it on half above the div (widthImage/2)*/
+    border: 6px solid rgba(255, 255, 255, 0.80);
+  }
+
+  &__title {
+    color: $mainBlue;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  &__subtitle {
+    color: $mainOrange;
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    margin: 0.25rem 0 1rem 0;/*over-writting previous margin as it was too much*/
+  }
+
+}

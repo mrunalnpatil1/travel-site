@@ -11,6 +11,10 @@
     font-weight: 500;
   }
 
+  &--blue {
+    color: $mainBlue;
+  }
+
   &__icon {
     display: block;/*drops text to new line (mobile first)*/
     margin-left: auto;
@@ -18,6 +22,8 @@
     margin-bottom: 0.6rem;
 
     @mixin atSmall {
+      position: relative;
+      top: 8px;/*pushes icon down by 8px (eg:-Testimonials icon)*/
       margin-right: 0.5rem;/*only for larger screens*/
       margin-left: 0;
       display: inline-block;/*so that,  on large screen it doesnt drop text on next line (undoing mobile first)*/
