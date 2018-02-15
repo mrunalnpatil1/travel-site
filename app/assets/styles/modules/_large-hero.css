@@ -8,6 +8,7 @@
 
   /*this class makes the div centered on image*/
   &__text-content {
+    padding-top: 88px;/*mobile first*/
     position: absolute;/*position relative to closest ancestor*/
     /*align center vertically*/
     top: 50%;
@@ -16,6 +17,10 @@
     left: 0;
     width: 100%;
     text-align: center;
+
+    @mixin atMedium {
+      padding-top: 60px;
+    }
   }
 
   &__title {
