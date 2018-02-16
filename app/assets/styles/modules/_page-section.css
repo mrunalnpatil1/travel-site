@@ -30,8 +30,10 @@
     background-color: #e0e6ef;/*mobile first*/
 
     @mixin atLarge {
-      background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
-      background-size: cover;/*cover the entire div*/
+      &.lazyloaded {
+        background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+        background-size: cover;/*cover the entire div*/
+      }
     }
   }
 

@@ -697,11 +697,10 @@ a {
 /*mobile first*/
 
 @media (min-width: 1010px) {
-
-.page-section--testimonials{
-      background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
-      background-size: cover/*cover the entire div*/
-  }
+      .page-section--testimonials.lazyloaded {
+        background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+        background-size: cover;/*cover the entire div*/
+      }
   }
 
 .headline {
