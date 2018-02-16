@@ -10,6 +10,10 @@
     max-width: 976px;
   }
 
+  &--narrow {
+    max-width: 470px;/*for the modal__description*/
+  }
+
   &--no-padding-until-medium {/*for testimonial mobile section*/
     padding-left: 0;/*making existing padding-left zero for mobile version*/
     padding-right: 0;/*making existing padding-right zero for mobile version*/
