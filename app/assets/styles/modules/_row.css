@@ -65,7 +65,7 @@
   }
 
   @mixin atLarge {
-    
+
     &__b-margin-until-large {
       margin-bottom: 0;
     }
@@ -96,7 +96,18 @@
   }
 
   /*begin equal height rules*/
-  &--equal-height-at-large {
+  .flexbox &--equal-height-at-medium {
+    @mixin atMedium {
+      display: flex;
+    }
+
+    & > div {
+      float: none;
+      display: flex;
+    }
+  }
+
+  .flexbox &--equal-height-at-large {
     @mixin atLarge {
       display: flex;
     }
