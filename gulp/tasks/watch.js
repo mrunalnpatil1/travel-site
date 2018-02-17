@@ -4,7 +4,6 @@ browserSync = require('browser-sync').create();
 
 gulp.task('watch', function(){
   /*whenever we save anything*/
-
   browserSync.init({
     notify: false,
     server: {
